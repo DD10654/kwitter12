@@ -14,7 +14,7 @@ var firebaseConfig = {
   username3 = localStorage.getItem("username");
   room_name2 = localStorage.getItem("room_name");
 
-  function getData() { firebase.database().ref("/"+Room_name).on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey = childSnapshot.key; childData = childSnapshot.val(); if(childKey != "purpose") { 
+  function getData() { firebase.database().ref("/"+room_name2).on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey = childSnapshot.key; childData = childSnapshot.val(); if(childKey != "purpose") { 
       firebase_message_id = childKey; 
       message_data = childData;
    //Start code
